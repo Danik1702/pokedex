@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import axios from 'axios';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import { Header } from "./components";
 
-export default App;
+import "./App.css";
+
+export const App = () => {
+  const [pokemons, setPokemons] = useState([]);
+
+  useEffect(() => {
+    const getPokemons = async () => {
+      const { data: pokemonsList } = await axios.get("https://pokeapi.co/api/v2/pokemon/?limit=12");
+
+      pokemonsList.results.forEach(async elem => {
+        let { data: pokemon } = await axios.get(elem.url)
+
+        setPokemons((state) => {
+          return [...state, pokemon]
+        });
+      });
+    };
+
+    getPokemons();
+  }, []);
+
+  console.log(pokemons);
+
+  return <Header />;
+};
