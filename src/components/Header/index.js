@@ -10,13 +10,11 @@ export const Header = () => {
 };
 
 const HeaderWrapper = styled.div`
-  width: 90%;
-  margin: 0 auto;
   height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid #cccccc;
+  color: white;
 `;
 
 const HeaderText = styled.h2`

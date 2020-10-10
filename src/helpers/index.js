@@ -1,15 +1,22 @@
-import { PokemonAPI } from "../services/api/api";
-
-export const getPokemons = () => {
-  let pokemons;
-
-  const getPokemonsData = async () => {
-    const pol = await PokemonAPI.get("/pokemon/?limit=12");
-
-    pokemons = pol;
-  };
-
-  getPokemonsData();
-
-  return pokemons;
-};
+export const pokemonTypes = {
+  normal: '#e6e6e6',
+  fighting: '#ff9999',
+  flying: '#b380ff',
+  poison: '#ffff99',
+  ground: '#cc9966',
+  rock: '#999966',
+  bug: '#ff99e6',
+  ghost: '#f2f2f2',
+  steal: '#666666',
+  fire: '#ff6666',
+  water: '#80dfff',
+  grass: '#66ff66',
+  electric: '#ffff33',
+  psychic: '#006699',
+  ice: '#80d4ff',
+  dragon: '#ff3333',
+  dark: '#b3b3b3',
+  fairy: '#a3a3c2',
+  unknown: '#ac3971',
+  shadow: '#ff9966',
+}
