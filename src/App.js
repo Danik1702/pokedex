@@ -47,7 +47,7 @@ export const App = () => {
           <ContentWrapper>
             <PokemonsContainer>{renderPokemonsList}</PokemonsContainer>
             {!!Object.keys(separatePokemon).length && (
-              <PokemonInfo pokemonData={separatePokemon} />
+              <PokemonInfo pokemonData={separatePokemon} onPokemonClick={onPokemonClick.bind(null, {})} />
             )}
           </ContentWrapper>
         )}
