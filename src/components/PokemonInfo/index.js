@@ -49,6 +49,16 @@ const Container = styled.div`
   box-sizing: border-box;
   padding: 20px 20px 30px 20px;
   border: 4px solid #4d4d33;
+
+  @media (max-width: 1080px) {
+    width: 50%;
+    left: 25%;
+  }
+
+  @media (max-width: 670px) {
+    width: 70%;
+    left: 15%;
+  }
 `;
 
 const PokemonImage = styled.img`

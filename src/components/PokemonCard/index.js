@@ -38,6 +38,14 @@ const Container = styled.div`
   &:hover {
     box-shadow: 0 0 10px 10px #ffffff;
   }
+
+  @media (max-width: 670px) {
+    width: 60%;
+    
+    &:nth-of-type(even) {
+        margin: 0 0 30px 0;
+      }
+  }
 `;
 
 const PokemonImage = styled.img`
