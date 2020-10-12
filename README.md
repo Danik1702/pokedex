@@ -1,1 +1,1 @@
-Demo [here](https://danik1702.github.io/pokedex/)
+Demo [here](https://pokedex-danyilkichalo.surge.sh)
